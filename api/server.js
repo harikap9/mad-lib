@@ -19,7 +19,7 @@ server.get('/do_a_random', (req, res) => {
 });
  
 // Mad Libs Route
-server.post('/ITC505/lab-7/index.html', (req, res) => {
+server.post('/submit', (req, res) => {
   const { adjective = '', pluralNoun = '', verb = '', adverb = '', bodyPart = '' } = req.body;
  
   // Improved validation
