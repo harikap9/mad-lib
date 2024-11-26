@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs Adventure Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🎲 Mad Libs Adventure Generator</h1>
+        <form action="/ITC505/lab-7" method="POST">
+            <div class="form-group">
+                <label for="adjective">🌈 Enter an Adjective:</label>
+                <input type="text" id="adjective" name="adjective" placeholder="Exciting, mysterious, colorful..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="pluralNoun">🏞️ Enter a Plural Noun:</label>
+                <input type="text" id="pluralNoun" name="pluralNoun" placeholder="Mountains, dragons, astronauts..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="verb">🏃 Enter a Verb:</label>
+                <input type="text" id="verb" name="verb" placeholder="Explore, dance, whisper..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="adverb">🚀 Enter an Adverb:</label>
+                <input type="text" id="adverb" name="adverb" placeholder="Quickly, silently, bravely..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="bodyPart">👀 Enter a Body Part:</label>
+                <input type="text" id="bodyPart" name="bodyPart" placeholder="Eyes, heart, hands..." required>
+            </div>
+
+            <button type="submit" class="submit-btn">Generate My Mad Lib!</button>
+        </form>
+
+        <div class="addendum">
+            <h2>🌟 Mad Libs Pro Tips!</h2>
+            <ul>
+                <li>Get creative! The wackier your words, the funnier your story will be.</li>
+                <li>Challenge friends to provide words without knowing the context.</li>
+                <li>Try using unexpected or unusual words to make your Mad Lib truly unique.</li>
+                <li>Play with different parts of speech to create hilarious narratives.</li>
+                <li>Remember: There are no wrong answers in Mad Libs - just pure imagination!</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Last updated: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var lastModified = new Date(document.lastModified);
+            var options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            var formattedDate = lastModified.toLocaleDateString('en-US', options);
+            document.getElementById('lastModified').textContent = formattedDate;
+        });
+    </script>
+</body>
+</html>
